@@ -1,10 +1,13 @@
+import { UseGuards } from '@nestjs/common';
 import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
 import { DogsService } from './dogs.service';
 import { Dog } from './entities/dog.entity';
 import { CreateDogInput } from './dto/create-dog.input';
 import { UpdateDogInput } from './dto/update-dog.input';
+import { RolesGuard } from 'src/roles.guard';
 
 @Resolver(() => Dog)
+@UseGuards(RolesGuard)
 export class DogsResolver {
   constructor(private readonly dogsService: DogsService) {}
 

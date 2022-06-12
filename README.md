@@ -1,3 +1,19 @@
+```zsh
+❯ nest new issue-nestjs
+? Which package manager would you ❤️ to use? yarn
+
+❯ nest g res cats
+? What transport layer do you use? REST API
+? Would you like to generate CRUD entry points? Yes
+
+❯ nest g res dogs
+? What transport layer do you use? GraphQL (code first)
+? Would you like to generate CRUD entry points? Yes
+
+❯ yarn add @nestjs/graphql @nestjs/apollo graphql apollo-server-express
+```
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
